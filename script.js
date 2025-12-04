@@ -28,25 +28,38 @@ const apjData = [
   { name: "Alejandro Suárez cmf (Responsable)", city: "Las Palmas", stage: "Fragua", birthday: "9999-09-26" },
   { name: "Javier Berdún (Responsable)", city: "Las Palmas", stage: "Vuelo", birthday: "9999-08-10" }
 ];
+
 // DOM Elements
 const contentArea = document.getElementById('content-area');
 const tabs = document.querySelectorAll('.tab-btn');
+
 // Helper Functions
 const formatDate = (dateString) => {
     const options = { month: 'long', day: 'numeric' };
     return new Date(dateString).toLocaleDateString('es-ES', options);
 };
+
 const getBirthdaySortValue = (dateString) => {
     const date = new Date(dateString);
-    // Sort by month and day, ignoring year for "upcoming" logic usually, 
-    // but for simple sorting let's just use month/day value
     return date.getMonth() * 100 + date.getDate();
 };
+
+// 🔎 Nueva función para detectar cumpleaños próximos
+const isUpcomingBirthday = (dateString) => {
+    const today = new Date();
+    const bday = new Date(dateString);
+    bday.setFullYear(today.getFullYear());
+
+    const diff = (bday - today) / (1000 * 60 * 60 * 24);
+    return diff >= 0 && diff <= 30; // próximos 30 días
+};
+
+// Render Card con clase condicional
 const renderCard = (apj) => {
-    // Normalizamos el nombre de la ciudad a minúsculas y sin espacios
     const cityClass = apj.city.toLowerCase().replace(/\s+/g, '-');
+    const upcomingClass = isUpcomingBirthday(apj.birthday) ? "upcoming-birthday" : "";
     return `
-        <div class="apj-card ${cityClass}">
+        <div class="apj-card ${cityClass} ${upcomingClass}">
             <div class="apj-name">${apj.name}</div>
             <div class="apj-details">
                 <div class="apj-detail-row">
@@ -65,6 +78,7 @@ const renderCard = (apj) => {
         </div>
     `;
 };
+
 const renderGroup = (title, items) => {
     const cardsHtml = items.map(renderCard).join('');
     return `
@@ -76,6 +90,7 @@ const renderGroup = (title, items) => {
         </div>
     `;
 };
+
 // Render Views
 const renderByCity = () => {
     const grouped = {};
@@ -90,17 +105,15 @@ const renderByCity = () => {
     });
     contentArea.innerHTML = html;
 };
+
 const renderByBirthday = () => {
-    // Sort by month/day
     const sorted = [...apjData].sort((a, b) => {
         return getBirthdaySortValue(a.birthday) - getBirthdaySortValue(b.birthday);
     });
-    // Group by Month
     const grouped = {};
     sorted.forEach(apj => {
         const date = new Date(apj.birthday);
         const month = date.toLocaleDateString('es-ES', { month: 'long' });
-        // Capitalize month
         const monthCap = month.charAt(0).toUpperCase() + month.slice(1);
         if (!grouped[monthCap]) grouped[monthCap] = [];
         grouped[monthCap].push(apj);
@@ -111,6 +124,7 @@ const renderByBirthday = () => {
     }
     contentArea.innerHTML = html;
 };
+
 const renderByStage = () => {
     const stageOrder = ["Ancla", "Brújula", "Rumbo", "Vuelo", "Compás", "Fragua", "Responsable"];
     const grouped = {};
@@ -124,7 +138,6 @@ const renderByStage = () => {
             html += renderGroup(stage, grouped[stage]);
         }
     });
-    // Handle any stages not in the ordered list (fallback)
     Object.keys(grouped).forEach(stage => {
         if (!stageOrder.includes(stage)) {
             html += renderGroup(stage, grouped[stage]);
@@ -132,12 +145,11 @@ const renderByStage = () => {
     });
     contentArea.innerHTML = html;
 };
+
 // Tab Switching Logic
 tabs.forEach(tab => {
     tab.addEventListener('click', () => {
-        // Remove active class from all
         tabs.forEach(t => t.classList.remove('active'));
-        // Add active to clicked
         tab.classList.add('active');
         const tabName = tab.dataset.tab;
         if (tabName === 'city') renderByCity();
@@ -145,5 +157,6 @@ tabs.forEach(tab => {
         else if (tabName === 'stage') renderByStage();
     });
 });
+
 // Initial Render
-renderByCity();
+renderBy

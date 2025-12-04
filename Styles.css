@@ -1,0 +1,163 @@
+:root {
+    --primary-orange: #faaf31;
+    --primary-black: #000000;
+    --primary-white: #ffffff;
+    --bg-gray: #f5f5f5;
+    --text-gray: #333333;
+    --card-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Maven Pro', sans-serif;
+    background-color: var(--bg-gray);
+    color: var(--primary-black);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-black);
+    color: var(--primary-white);
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 5px solid var(--primary-orange);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-orange);
+}
+
+header h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary-white);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    background: none;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--text-gray);
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    background-color: rgba(250, 175, 49, 0.1);
+}
+
+.tab-btn.active {
+    color: var(--primary-black);
+    border-bottom-color: var(--primary-orange);
+}
+
+main {
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-group {
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    color: var(--primary-black);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-orange);
+    display: inline-block;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.apj-card {
+    background-color: var(--primary-white);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: var(--card-shadow);
+    border-left: 4px solid var(--primary-orange);
+    display: flex;
+    flex-direction: column;
+}
+
+.apj-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.apj-details {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+}
+
+.apj-detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+}
+
+.label {
+    font-weight: 600;
+    color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tab-btn {
+        font-size: 0.9rem;
+        padding: 0.8rem 0.5rem;
+    }
+}
+
+/* 🎨 Colores específicos por ciudad */
+.apj-card.sevilla { border-left-color: pink; }
+.apj-card.las-palmas { border-left-color: yellow; }
+.apj-card.tenerife { border-left-color: #003366; } /* azul más oscuro */
+.apj-card.málaga { border-left-color: #3399ff; }   /* azul más claro */
+.apj-card.granada { border-left-color: #800000; }  /* granate */
+.apj-card.don-benito { border-left-color: red; }
+.apj-card.loja { border-left-color: purple; }
+.apj-card.madrid { border-left-color: green; }
+.apj-card.almendralejo { border-left-color: olive; }
+.apj-card.valencia-del-ventoso { border-left-color: sienna; } /* marrón tierra */
+.apj-card.doctrina-cristiana { border-left-color: gray; }
+.apj-card.teologado-claretiano { border-left-color: #800000; } /* granate */
+
+/* Estilo para cumpleaños próximos */
+.upcoming-birthday {
+  border: 2px solid orange;
+  background-color: #fff8e1; /* tono cálido */
+}
