@@ -43,8 +43,10 @@ const getBirthdaySortValue = (dateString) => {
     return date.getMonth() * 100 + date.getDate();
 };
 const renderCard = (apj) => {
+    // Normalizamos el nombre de la ciudad a minúsculas y sin espacios
+    const cityClass = apj.city.toLowerCase().replace(/\s+/g, '-');
     return `
-        <div class="apj-card">
+        <div class="apj-card ${cityClass}">
             <div class="apj-name">${apj.name}</div>
             <div class="apj-details">
                 <div class="apj-detail-row">
