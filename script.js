@@ -26,6 +26,7 @@ const apjData = [
 { name: "Fernando S.", city: "Las Palmas", stage: "Compás", birthday: "2000-03-01" },
 { name: "P. Alejandro CMF (Responsable)", city: "Las Palmas", stage: "Fragua", birthday: "2000-09-26" },
 { name: "Javier B. (Responsable)", city: "Las Palmas", stage: "Vuelo", birthday: "2000-08-10" },
+
 { name: "Carmen R.V.", city: "Don Benito", stage: "Ancla", birthday: "2000-10-09" },
 { name: "Josefina C.", city: "Don Benito", stage: "Brújula", birthday: "2000-08-26" },
 { name: "Carlos D.", city: "Don Benito", stage: "Brújula", birthday: "2000-07-10" },
@@ -38,6 +39,27 @@ const apjData = [
 { name: "María C.", city: "Don Benito", stage: "Vuelo", birthday: "2000-08-13" },
 { name: "Celia N. (Responsable)", city: "Don Benito", stage: "Responsable", birthday: "2000-08-09" },
 { name: "P. Francis CMF (Responsable)", city: "Don Benito", stage: "Responsable", birthday: "2000-03-26" },
+
+{ name: "Julia B. (Timón)", city: "Málaga", stage: "Ancla", birthday: "2000-12-29" },
+{ name: "Javier A. (Timón)", city: "Málaga", stage: "Ancla", birthday: "2000-04-05" },
+{ name: "Ale M. (Neo) (Timón)", city: "Málaga", stage: "Ancla", birthday: "2000-11-23" },
+{ name: "Camino B.", city: "Málaga", stage: "Ancla", birthday: "2000-09-22" },
+{ name: "Marina R.", city: "Málaga", stage: "Ancla", birthday: "2000-06-02" },
+{ name: "Clara S.", city: "Málaga", stage: "Ancla", birthday: "2000-12-28" },
+{ name: "Julia N.", city: "Málaga", stage: "Ancla", birthday: "2000-07-06" },
+{ name: "Pedro S. JR. (Neo)", city: "Málaga", stage: "Ancla", birthday: "2000-11-09" },
+{ name: "Pablo P.", city: "Málaga", stage: "Brújula", birthday: "2000-03-06" },
+{ name: "Fernando C.", city: "Málaga", stage: "Brújula", birthday: "2000-02-27" },
+{ name: "Masu O.", city: "Málaga", stage: "Brújula", birthday: "2000-11-12" },
+{ name: "Alejandro", city: "Málaga", stage: "Brújula", birthday: "2000-10-12" },
+{ name: "Jesús S.", city: "Málaga", stage: "Brújula", birthday: "2000-02-09" },
+{ name: "David S.", city: "Málaga", stage: "Rumbo", birthday: "2000-03-13" },
+{ name: "Rafael P.", city: "Málaga", stage: "Rumbo", birthday: "2000-01-17" },
+{ name: "María F.", city: "Málaga", stage: "Vuelo", birthday: "2000-03-28" },
+{ name: "Rafael C.", city: "Málaga", stage: "Vuelo", birthday: "2000-10-31" },
+{ name: "Pedro S. (Responsable)", city: "Málaga", stage: "Responsable", birthday: "2000-03-22" },
+{ name: "Raquel C. (Responsable)", city: "Málaga", stage: "Responsable", birthday: "2000-04-09" },
+{ name: "P. Rocky CMF (Claretiano)", city: "Málaga", stage: "Claretiano", birthday: "2000-11-09" },
 
 ];
 
