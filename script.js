@@ -159,4 +159,4 @@ tabs.forEach(tab => {
 });
 
 // Initial Render
-renderBy
+renderByCity();
