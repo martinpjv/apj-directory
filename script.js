@@ -23,10 +23,23 @@ const apjData = [
   { name: "Fernando Sosa (coord.)", city: "Las Palmas", stage: "Vuelo", birthday: "2000-03-01" },
   { name: "Paola Sosa", city: "Las Palmas", stage: "Vuelo", birthday: "2000-01-25" },
   { name: "Samuel González", city: "Las Palmas", stage: "Vuelo", birthday: "2000-10-13" },
-  { name: "Javier Berdún", city: "Las Palmas", stage: "Vuelo", birthday: "2000-08-10" },
   { name: "Fernando Sosa", city: "Las Palmas", stage: "Compás", birthday: "2000-03-01" },
   { name: "Alejandro Suárez cmf (Responsable)", city: "Las Palmas", stage: "Fragua", birthday: "2000-09-26" },
   { name: "Javier Berdún (Responsable)", city: "Las Palmas", stage: "Vuelo", birthday: "2000-08-10" }
+// Don Benito (simplificado)
+{ name: "Carmen Rodríguez", city: "Don Benito", stage: "Ancla", birthday: "2000-10-09" },
+{ name: "Josefina Calderón", city: "Don Benito", stage: "Brújula", birthday: "2000-08-26" },
+{ name: "Carlos Díaz", city: "Don Benito", stage: "Brújula", birthday: "2000-07-10" },
+{ name: "Ana Carmen Vivas", city: "Don Benito", stage: "Rumbo", birthday: "2000-04-15" },
+{ name: "Nieves Pajuelo", city: "Don Benito", stage: "Rumbo", birthday: "2000-01-30" },
+{ name: "Raquel Parejo", city: "Don Benito", stage: "Rumbo", birthday: "2000-03-16" }, // 4º ESO → Rumbo
+{ name: "Ismael Gallardo", city: "Don Benito", stage: "Rumbo", birthday: "2000-07-05" }, // 4º ESO → Rumbo
+{ name: "Alejandro Falgas", city: "Don Benito", stage: "Vuelo", birthday: "2000-03-09" }, // 1º BTO → Vuelo
+{ name: "Cynthia Benítez", city: "Don Benito", stage: "Vuelo", birthday: "2000-06-03" }, // 2º BTO → Vuelo
+{ name: "María Capilla", city: "Don Benito", stage: "Vuelo", birthday: "2000-08-13" }, // 2º BTO → Vuelo
+{ name: "Celia Nieto (Responsable)", city: "Don Benito", stage: "Vuelo", birthday: "2000-08-09" }, // 1º BTO → Vuelo
+{ name: "P. Francis CMF (Responsable)", city: "Don Benito", stage: "Responsable", birthday: "2000-03-26" }, // Responsable CMF
+
 ];
 
 // DOM Elements
