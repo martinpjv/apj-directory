@@ -159,5 +159,7 @@ tabs.forEach(tab => {
 });
 
 // Initial Render
-renderBy
+renderBy();
+
+
 
