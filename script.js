@@ -1,10 +1,3 @@
-Perfecto, Martín 🙌. Aquí tienes el **`script.js` completo y cerrado**, con la lógica de cumpleaños próximos ya integrada. Lo puedes copiar y pegar tal cual en tu proyecto:
-
----
-
-## 📂 `script.js`
-
-```javascript
 // Mock Data
 const apjData = [
   { name: "Carlota Calandria (coord.)", city: "Las Palmas", stage: "Ancla", birthday: "2000-12-06" }, // ejemplo: mañana
@@ -167,3 +160,4 @@ tabs.forEach(tab => {
 
 // Initial Render
 renderBy
+
