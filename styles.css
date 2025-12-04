@@ -155,3 +155,9 @@ main {
 .apj-card.valencia-del-ventoso { border-left-color: sienna; } /* marrón tierra */
 .apj-card.doctrina-cristiana { border-left-color: gray; }
 .apj-card.teologado-claretiano { border-left-color: #800000; } /* granate */
+
+/* Estilo para cumpleaños próximos */
+.upcoming-birthday {
+  border: 2px solid orange;
+  background-color: #fff8e1; /* tono cálido */
+}
