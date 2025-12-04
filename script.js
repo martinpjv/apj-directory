@@ -1,32 +1,39 @@
+Perfecto, Martín 🙌. Aquí tienes el **`script.js` completo y cerrado**, con la lógica de cumpleaños próximos ya integrada. Lo puedes copiar y pegar tal cual en tu proyecto:
+
+---
+
+## 📂 `script.js`
+
+```javascript
 // Mock Data
 const apjData = [
-  { name: "Carlota Calandria (coord.)", city: "Las Palmas", stage: "Ancla", birthday: "9999-05-10" },
-  { name: "Jeysabel Martínez", city: "Las Palmas", stage: "Ancla", birthday: "9999-05-25" },
-  { name: "Carlos Arencibia", city: "Las Palmas", stage: "Ancla", birthday: "9999-02-11" },
-  { name: "Daniel Hawach (neo)", city: "Las Palmas", stage: "Ancla", birthday: "9999-12-26" },
-  { name: "Diana Pérez (neo)", city: "Las Palmas", stage: "Ancla", birthday: "9999-01-13" },
-  { name: "Carla Jiménez (neo)", city: "Las Palmas", stage: "Ancla", birthday: "9999-09-09" },
-  { name: "Fátima Santana (coord.)", city: "Las Palmas", stage: "Brújula", birthday: "9999-02-01" },
-  { name: "Miguel López", city: "Las Palmas", stage: "Brújula", birthday: "9999-09-04" },
-  { name: "Darío León", city: "Las Palmas", stage: "Brújula", birthday: "9999-11-06" },
-  { name: "María González (neo)", city: "Las Palmas", stage: "Brújula", birthday: "9999-11-20" },
-  { name: "David Quintana (neo)", city: "Las Palmas", stage: "Brújula", birthday: "9999-08-05" },
-  { name: "Víctor Pineda (neo)", city: "Las Palmas", stage: "Brújula", birthday: "9999-05-26" },
-  { name: "Natalia Fernández (neo)", city: "Las Palmas", stage: "Brújula", birthday: "9999-12-09" },
-  { name: "Jesús Toro (coord.)", city: "Las Palmas", stage: "Rumbo", birthday: "9999-12-21" },
-  { name: "Guillermo Alonso", city: "Las Palmas", stage: "Rumbo", birthday: "9999-01-28" },
-  { name: "Eduardo Kaddour", city: "Las Palmas", stage: "Rumbo", birthday: "9999-07-13" },
-  { name: "Eduardo Cano", city: "Las Palmas", stage: "Rumbo", birthday: "9999-04-28" },
-  { name: "Pablo Arencibia", city: "Las Palmas", stage: "Rumbo", birthday: "9999-02-11" },
-  { name: "Marta Alcaide (neo)", city: "Las Palmas", stage: "Rumbo", birthday: "9999-04-16" },
-  { name: "Diego Quintana (neo)", city: "Las Palmas", stage: "Rumbo", birthday: "9999-03-15" },
-  { name: "Fernando Sosa (coord.)", city: "Las Palmas", stage: "Vuelo", birthday: "9999-03-01" },
-  { name: "Paola Sosa", city: "Las Palmas", stage: "Vuelo", birthday: "9999-01-25" },
-  { name: "Samuel González", city: "Las Palmas", stage: "Vuelo", birthday: "9999-10-13" },
-  { name: "Javier Berdún", city: "Las Palmas", stage: "Vuelo", birthday: "9999-08-10" },
-  { name: "Fernando Sosa", city: "Las Palmas", stage: "Compás", birthday: "9999-03-01" },
-  { name: "Alejandro Suárez cmf (Responsable)", city: "Las Palmas", stage: "Fragua", birthday: "9999-09-26" },
-  { name: "Javier Berdún (Responsable)", city: "Las Palmas", stage: "Vuelo", birthday: "9999-08-10" }
+  { name: "Carlota Calandria (coord.)", city: "Las Palmas", stage: "Ancla", birthday: "2000-12-06" }, // ejemplo: mañana
+  { name: "Jeysabel Martínez", city: "Las Palmas", stage: "Ancla", birthday: "2000-05-25" },
+  { name: "Carlos Arencibia", city: "Las Palmas", stage: "Ancla", birthday: "2000-02-11" },
+  { name: "Daniel Hawach (neo)", city: "Las Palmas", stage: "Ancla", birthday: "2000-12-26" },
+  { name: "Diana Pérez (neo)", city: "Las Palmas", stage: "Ancla", birthday: "2000-01-13" },
+  { name: "Carla Jiménez (neo)", city: "Las Palmas", stage: "Ancla", birthday: "2000-09-09" },
+  { name: "Fátima Santana (coord.)", city: "Las Palmas", stage: "Brújula", birthday: "2000-02-01" },
+  { name: "Miguel López", city: "Las Palmas", stage: "Brújula", birthday: "2000-09-04" },
+  { name: "Darío León", city: "Las Palmas", stage: "Brújula", birthday: "2000-11-06" },
+  { name: "María González (neo)", city: "Las Palmas", stage: "Brújula", birthday: "2000-11-20" },
+  { name: "David Quintana (neo)", city: "Las Palmas", stage: "Brújula", birthday: "2000-08-05" },
+  { name: "Víctor Pineda (neo)", city: "Las Palmas", stage: "Brújula", birthday: "2000-05-26" },
+  { name: "Natalia Fernández (neo)", city: "Las Palmas", stage: "Brújula", birthday: "2000-12-09" },
+  { name: "Jesús Toro (coord.)", city: "Las Palmas", stage: "Rumbo", birthday: "2000-12-21" },
+  { name: "Guillermo Alonso", city: "Las Palmas", stage: "Rumbo", birthday: "2000-01-28" },
+  { name: "Eduardo Kaddour", city: "Las Palmas", stage: "Rumbo", birthday: "2000-07-13" },
+  { name: "Eduardo Cano", city: "Las Palmas", stage: "Rumbo", birthday: "2000-04-28" },
+  { name: "Pablo Arencibia", city: "Las Palmas", stage: "Rumbo", birthday: "2000-02-11" },
+  { name: "Marta Alcaide (neo)", city: "Las Palmas", stage: "Rumbo", birthday: "2000-04-16" },
+  { name: "Diego Quintana (neo)", city: "Las Palmas", stage: "Rumbo", birthday: "2000-03-15" },
+  { name: "Fernando Sosa (coord.)", city: "Las Palmas", stage: "Vuelo", birthday: "2000-03-01" },
+  { name: "Paola Sosa", city: "Las Palmas", stage: "Vuelo", birthday: "2000-01-25" },
+  { name: "Samuel González", city: "Las Palmas", stage: "Vuelo", birthday: "2000-10-13" },
+  { name: "Javier Berdún", city: "Las Palmas", stage: "Vuelo", birthday: "2000-08-10" },
+  { name: "Fernando Sosa", city: "Las Palmas", stage: "Compás", birthday: "2000-03-01" },
+  { name: "Alejandro Suárez cmf (Responsable)", city: "Las Palmas", stage: "Fragua", birthday: "2000-09-26" },
+  { name: "Javier Berdún (Responsable)", city: "Las Palmas", stage: "Vuelo", birthday: "2000-08-10" }
 ];
 
 // DOM Elements
