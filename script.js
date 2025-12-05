@@ -37,8 +37,8 @@ const apjData = [
 { name: "Alejandro F.", city: "Don Benito", stage: "Vuelo", birthday: "2000-03-09" },
 { name: "Cynthia B.", city: "Don Benito", stage: "Vuelo", birthday: "2000-06-03" },
 { name: "María C.", city: "Don Benito", stage: "Vuelo", birthday: "2000-08-13" },
-{ name: "Celia N. (Responsable)", city: "Don Benito", stage: "Responsable", birthday: "2000-08-09" },
-{ name: "P. Francis CMF (Responsable)", city: "Don Benito", stage: "Responsable", birthday: "2000-03-26" },
+{ name: "Celia N. (Responsable)", city: "Don Benito", stage: "Responsable Seglar", birthday: "2000-08-09" },
+{ name: "P. Francis CMF (Responsable)", city: "Don Benito", stage: "Responsable Claretiano", birthday: "2000-03-26" },
 
 { name: "Julia B. (Timón)", city: "Málaga", stage: "Ancla", birthday: "2000-12-29" },
 { name: "Javier A. (Timón)", city: "Málaga", stage: "Ancla", birthday: "2000-04-05" },
@@ -57,9 +57,9 @@ const apjData = [
 { name: "Rafael P.", city: "Málaga", stage: "Rumbo", birthday: "2000-01-17" },
 { name: "María F.", city: "Málaga", stage: "Vuelo", birthday: "2000-03-28" },
 { name: "Rafael C.", city: "Málaga", stage: "Vuelo", birthday: "2000-10-31" },
-{ name: "Pedro S. (Responsable)", city: "Málaga", stage: "Responsable", birthday: "2000-03-22" },
-{ name: "Raquel C. (Responsable)", city: "Málaga", stage: "Responsable", birthday: "2000-04-09" },
-{ name: "P. Rocky CMF (Claretiano)", city: "Málaga", stage: "Claretiano", birthday: "2000-11-09" },
+{ name: "Pedro S. (Responsable)", city: "Málaga", stage: "Responsable Seglar", birthday: "2000-03-22" },
+{ name: "Raquel C. (Responsable)", city: "Málaga", stage: "Responsable Seglar", birthday: "2000-04-09" },
+{ name: "P. Rocky CMF (Responsable)", city: "Málaga", stage: "Responsable Claretiano", birthday: "2000-11-09" },
 
 
 // 📍 Almendralejo (CALENDARIOS ANTIGUOS CALENDAR)
@@ -71,7 +71,7 @@ const apjData = [
 { name: "Ana G.", birthday: "2023-06-30", city: "Almendralejo", stage: "INACTIVO" },
 { name: "Andrea FM.", birthday: "2023-03-05", city: "Almendralejo", stage: "INACTIVO" },
 { name: "Antonio B.", birthday: "2023-10-16", city: "Almendralejo", stage: "INACTIVO" },
-{ name: "Belén FC.", birthday: "2023-12-06", city: "Almendralejo", stage: "INACTIVO" },
+{ name: "Belén FC. (Responsable)", birthday: "2023-12-06", city: "Almendralejo", stage: "Rumbo" },
 { name: "Candy MD.", birthday: "2023-07-12", city: "Almendralejo", stage: "INACTIVO" },
 { name: "Carlos CR.", birthday: "2023-04-15", city: "Almendralejo", stage: "INACTIVO" },
 { name: "Carmen GB.", birthday: "2023-06-05", city: "Almendralejo", stage: "INACTIVO" },
@@ -123,7 +123,7 @@ const apjData = [
 { name: "Ana GR.", birthday: "2023-04-11", city: "Don Benito", stage: "INACTIVO" },
 { name: "Bea L.", birthday: "2024-02-09", city: "Don Benito", stage: "INACTIVO" },
 { name: "Carmen R.", birthday: "2023-10-09", city: "Don Benito", stage: "INACTIVO" },
-{ name: "Celia NV.", birthday: "2023-08-09", city: "Don Benito", stage: "INACTIVO" },
+{ name: "Celia NV. (Responsable)", birthday: "2023-08-09", city: "Don Benito", stage: "INACTIVO" },
 { name: "Ismael GP.", birthday: "2023-07-05", city: "Don Benito", stage: "INACTIVO" },
 { name: "Israel", birthday: "2023-12-13", city: "Don Benito", stage: "INACTIVO" },
 { name: "Josefina CD.", birthday: "2023-08-26", city: "Don Benito", stage: "INACTIVO" },
