@@ -1,32 +1,65 @@
 // Mock Data
 const apjData = [
-  { name: "Carlota Calandria (coord.)", city: "Las Palmas", stage: "Ancla", birthday: "9999-05-10" },
-  { name: "Jeysabel Martínez", city: "Las Palmas", stage: "Ancla", birthday: "9999-05-25" },
-  { name: "Carlos Arencibia", city: "Las Palmas", stage: "Ancla", birthday: "9999-02-11" },
-  { name: "Daniel Hawach (neo)", city: "Las Palmas", stage: "Ancla", birthday: "9999-12-26" },
-  { name: "Diana Pérez (neo)", city: "Las Palmas", stage: "Ancla", birthday: "9999-01-13" },
-  { name: "Carla Jiménez (neo)", city: "Las Palmas", stage: "Ancla", birthday: "9999-09-09" },
-  { name: "Fátima Santana (coord.)", city: "Las Palmas", stage: "Brújula", birthday: "9999-02-01" },
-  { name: "Miguel López", city: "Las Palmas", stage: "Brújula", birthday: "9999-09-04" },
-  { name: "Darío León", city: "Las Palmas", stage: "Brújula", birthday: "9999-11-06" },
-  { name: "María González (neo)", city: "Las Palmas", stage: "Brújula", birthday: "9999-11-20" },
-  { name: "David Quintana (neo)", city: "Las Palmas", stage: "Brújula", birthday: "9999-08-05" },
-  { name: "Víctor Pineda (neo)", city: "Las Palmas", stage: "Brújula", birthday: "9999-05-26" },
-  { name: "Natalia Fernández (neo)", city: "Las Palmas", stage: "Brújula", birthday: "9999-12-09" },
-  { name: "Jesús Toro (coord.)", city: "Las Palmas", stage: "Rumbo", birthday: "9999-12-21" },
-  { name: "Guillermo Alonso", city: "Las Palmas", stage: "Rumbo", birthday: "9999-01-28" },
-  { name: "Eduardo Kaddour", city: "Las Palmas", stage: "Rumbo", birthday: "9999-07-13" },
-  { name: "Eduardo Cano", city: "Las Palmas", stage: "Rumbo", birthday: "9999-04-28" },
-  { name: "Pablo Arencibia", city: "Las Palmas", stage: "Rumbo", birthday: "9999-02-11" },
-  { name: "Marta Alcaide (neo)", city: "Las Palmas", stage: "Rumbo", birthday: "9999-04-16" },
-  { name: "Diego Quintana (neo)", city: "Las Palmas", stage: "Rumbo", birthday: "9999-03-15" },
-  { name: "Fernando Sosa (coord.)", city: "Las Palmas", stage: "Vuelo", birthday: "9999-03-01" },
-  { name: "Paola Sosa", city: "Las Palmas", stage: "Vuelo", birthday: "9999-01-25" },
-  { name: "Samuel González", city: "Las Palmas", stage: "Vuelo", birthday: "9999-10-13" },
-  { name: "Javier Berdún", city: "Las Palmas", stage: "Vuelo", birthday: "9999-08-10" },
-  { name: "Fernando Sosa", city: "Las Palmas", stage: "Compás", birthday: "9999-03-01" },
-  { name: "Alejandro Suárez cmf (Responsable)", city: "Las Palmas", stage: "Fragua", birthday: "9999-09-26" },
-  { name: "Javier Berdún (Responsable)", city: "Las Palmas", stage: "Vuelo", birthday: "9999-08-10" },
+{ name: "Carlota C. (coord.)", city: "Las Palmas", stage: "Ancla", birthday: "2000-12-06" },
+{ name: "Jeysabel M.", city: "Las Palmas", stage: "Ancla", birthday: "2000-05-25" },
+{ name: "Carlos A.", city: "Las Palmas", stage: "Ancla", birthday: "2000-02-11" },
+{ name: "Daniel H. (neo)", city: "Las Palmas", stage: "Ancla", birthday: "2000-12-26" },
+{ name: "Diana P. (neo)", city: "Las Palmas", stage: "Ancla", birthday: "2000-01-13" },
+{ name: "Carla J. (neo)", city: "Las Palmas", stage: "Ancla", birthday: "2000-09-09" },
+{ name: "Fátima S. (coord.)", city: "Las Palmas", stage: "Brújula", birthday: "2000-02-01" },
+{ name: "Miguel L.", city: "Las Palmas", stage: "Brújula", birthday: "2000-09-04" },
+{ name: "Darío L.", city: "Las Palmas", stage: "Brújula", birthday: "2000-11-06" },
+{ name: "María G. (neo)", city: "Las Palmas", stage: "Brújula", birthday: "2000-11-20" },
+{ name: "David Q. (neo)", city: "Las Palmas", stage: "Brújula", birthday: "2000-08-05" },
+{ name: "Víctor P. (neo)", city: "Las Palmas", stage: "Brújula", birthday: "2000-05-26" },
+{ name: "Natalia F. (neo)", city: "Las Palmas", stage: "Brújula", birthday: "2000-12-09" },
+{ name: "Jesús T. (coord.)", city: "Las Palmas", stage: "Rumbo", birthday: "2000-12-21" },
+{ name: "Guillermo A.", city: "Las Palmas", stage: "Rumbo", birthday: "2000-01-28" },
+{ name: "Eduardo K.", city: "Las Palmas", stage: "Rumbo", birthday: "2000-07-13" },
+{ name: "Eduardo C.", city: "Las Palmas", stage: "Rumbo", birthday: "2000-04-28" },
+{ name: "Pablo A.", city: "Las Palmas", stage: "Rumbo", birthday: "2000-02-11" },
+{ name: "Marta A. (neo)", city: "Las Palmas", stage: "Rumbo", birthday: "2000-04-16" },
+{ name: "Diego Q. (neo)", city: "Las Palmas", stage: "Rumbo", birthday: "2000-03-15" },
+{ name: "Fernando S. (coord.)", city: "Las Palmas", stage: "Vuelo", birthday: "2000-03-01" },
+{ name: "Paola S.", city: "Las Palmas", stage: "Vuelo", birthday: "2000-01-25" },
+{ name: "Samuel G.", city: "Las Palmas", stage: "Vuelo", birthday: "2000-10-13" },
+{ name: "Fernando S.", city: "Las Palmas", stage: "Compás", birthday: "2000-03-01" },
+{ name: "P. Alejandro CMF (Responsable)", city: "Las Palmas", stage: "Fragua", birthday: "2000-09-26" },
+{ name: "Javier B. (Responsable)", city: "Las Palmas", stage: "Vuelo", birthday: "2000-08-10" },
+
+{ name: "Carmen R.V.", city: "Don Benito", stage: "Ancla", birthday: "2000-10-09" },
+{ name: "Josefina C.", city: "Don Benito", stage: "Brújula", birthday: "2000-08-26" },
+{ name: "Carlos D.", city: "Don Benito", stage: "Brújula", birthday: "2000-07-10" },
+{ name: "Ana Carmen V.", city: "Don Benito", stage: "Rumbo", birthday: "2000-04-15" },
+{ name: "Nieves P.", city: "Don Benito", stage: "Rumbo", birthday: "2000-01-30" },
+{ name: "Raquel P.", city: "Don Benito", stage: "Rumbo", birthday: "2000-03-16" },
+{ name: "Ismael G.", city: "Don Benito", stage: "Rumbo", birthday: "2000-07-05" },
+{ name: "Alejandro F.", city: "Don Benito", stage: "Vuelo", birthday: "2000-03-09" },
+{ name: "Cynthia B.", city: "Don Benito", stage: "Vuelo", birthday: "2000-06-03" },
+{ name: "María C.", city: "Don Benito", stage: "Vuelo", birthday: "2000-08-13" },
+{ name: "Celia N. (Responsable)", city: "Don Benito", stage: "Responsable", birthday: "2000-08-09" },
+{ name: "P. Francis CMF (Responsable)", city: "Don Benito", stage: "Responsable", birthday: "2000-03-26" },
+
+{ name: "Julia B. (Timón)", city: "Málaga", stage: "Ancla", birthday: "2000-12-29" },
+{ name: "Javier A. (Timón)", city: "Málaga", stage: "Ancla", birthday: "2000-04-05" },
+{ name: "Ale M. (Neo) (Timón)", city: "Málaga", stage: "Ancla", birthday: "2000-11-23" },
+{ name: "Camino B.", city: "Málaga", stage: "Ancla", birthday: "2000-09-22" },
+{ name: "Marina R.", city: "Málaga", stage: "Ancla", birthday: "2000-06-02" },
+{ name: "Clara S.", city: "Málaga", stage: "Ancla", birthday: "2000-12-28" },
+{ name: "Julia N.", city: "Málaga", stage: "Ancla", birthday: "2000-07-06" },
+{ name: "Pedro S. JR. (Neo)", city: "Málaga", stage: "Ancla", birthday: "2000-11-09" },
+{ name: "Pablo P.", city: "Málaga", stage: "Brújula", birthday: "2000-03-06" },
+{ name: "Fernando C.", city: "Málaga", stage: "Brújula", birthday: "2000-02-27" },
+{ name: "Masu O.", city: "Málaga", stage: "Brújula", birthday: "2000-11-12" },
+{ name: "Alejandro", city: "Málaga", stage: "Brújula", birthday: "2000-10-12" },
+{ name: "Jesús S.", city: "Málaga", stage: "Brújula", birthday: "2000-02-09" },
+{ name: "David S.", city: "Málaga", stage: "Rumbo", birthday: "2000-03-13" },
+{ name: "Rafael P.", city: "Málaga", stage: "Rumbo", birthday: "2000-01-17" },
+{ name: "María F.", city: "Málaga", stage: "Vuelo", birthday: "2000-03-28" },
+{ name: "Rafael C.", city: "Málaga", stage: "Vuelo", birthday: "2000-10-31" },
+{ name: "Pedro S. (Responsable)", city: "Málaga", stage: "Responsable", birthday: "2000-03-22" },
+{ name: "Raquel C. (Responsable)", city: "Málaga", stage: "Responsable", birthday: "2000-04-09" },
+{ name: "P. Rocky CMF (Claretiano)", city: "Málaga", stage: "Claretiano", birthday: "2000-11-09" },
 
 
 // 📍 Almendralejo (CALENDARIOS ANTIGUOS CALENDAR)
@@ -263,27 +296,39 @@ const apjData = [
 { name: "Sandra DG.", birthday: "2023-07-12", city: "Valencia del Ventoso", stage: "INACTIVO" },
 { name: "Sofía B. (Responsable)", birthday: "2023-07-12", city: "Valencia del Ventoso", stage: "INACTIVO" },
 
-
 ];
+
 // DOM Elements
 const contentArea = document.getElementById('content-area');
 const tabs = document.querySelectorAll('.tab-btn');
+
 // Helper Functions
 const formatDate = (dateString) => {
     const options = { month: 'long', day: 'numeric' };
     return new Date(dateString).toLocaleDateString('es-ES', options);
 };
+
 const getBirthdaySortValue = (dateString) => {
     const date = new Date(dateString);
-    // Sort by month and day, ignoring year for "upcoming" logic usually, 
-    // but for simple sorting let's just use month/day value
     return date.getMonth() * 100 + date.getDate();
 };
+
+// 🔎 Nueva función para detectar cumpleaños próximos
+const isUpcomingBirthday = (dateString) => {
+    const today = new Date();
+    const bday = new Date(dateString);
+    bday.setFullYear(today.getFullYear());
+
+    const diff = (bday - today) / (1000 * 60 * 60 * 24);
+    return diff >= 0 && diff <= 30; // próximos 30 días
+};
+
+// Render Card con clase condicional
 const renderCard = (apj) => {
-    // Normalizamos el nombre de la ciudad a minúsculas y sin espacios
     const cityClass = apj.city.toLowerCase().replace(/\s+/g, '-');
+    const upcomingClass = isUpcomingBirthday(apj.birthday) ? "upcoming-birthday" : "";
     return `
-        <div class="apj-card ${cityClass}">
+        <div class="apj-card ${cityClass} ${upcomingClass}">
             <div class="apj-name">${apj.name}</div>
             <div class="apj-details">
                 <div class="apj-detail-row">
@@ -302,6 +347,7 @@ const renderCard = (apj) => {
         </div>
     `;
 };
+
 const renderGroup = (title, items) => {
     const cardsHtml = items.map(renderCard).join('');
     return `
@@ -313,6 +359,7 @@ const renderGroup = (title, items) => {
         </div>
     `;
 };
+
 // Render Views
 const renderByCity = () => {
     const grouped = {};
@@ -327,17 +374,15 @@ const renderByCity = () => {
     });
     contentArea.innerHTML = html;
 };
+
 const renderByBirthday = () => {
-    // Sort by month/day
     const sorted = [...apjData].sort((a, b) => {
         return getBirthdaySortValue(a.birthday) - getBirthdaySortValue(b.birthday);
     });
-    // Group by Month
     const grouped = {};
     sorted.forEach(apj => {
         const date = new Date(apj.birthday);
         const month = date.toLocaleDateString('es-ES', { month: 'long' });
-        // Capitalize month
         const monthCap = month.charAt(0).toUpperCase() + month.slice(1);
         if (!grouped[monthCap]) grouped[monthCap] = [];
         grouped[monthCap].push(apj);
@@ -348,6 +393,7 @@ const renderByBirthday = () => {
     }
     contentArea.innerHTML = html;
 };
+
 const renderByStage = () => {
     const stageOrder = ["Ancla", "Brújula", "Rumbo", "Vuelo", "Compás", "Fragua", "Responsable"];
     const grouped = {};
@@ -361,7 +407,6 @@ const renderByStage = () => {
             html += renderGroup(stage, grouped[stage]);
         }
     });
-    // Handle any stages not in the ordered list (fallback)
     Object.keys(grouped).forEach(stage => {
         if (!stageOrder.includes(stage)) {
             html += renderGroup(stage, grouped[stage]);
@@ -369,18 +414,35 @@ const renderByStage = () => {
     });
     contentArea.innerHTML = html;
 };
+
+const renderHistorical = () => {
+    const grouped = {};
+    apjData.forEach(apj => {
+        if (apj.stage === "INACTIVO") {
+            if (!grouped[apj.city]) grouped[apj.city] = [];
+            grouped[apj.city].push(apj);
+        }
+    });
+    const sortedCities = Object.keys(grouped).sort();
+    let html = '';
+    sortedCities.forEach(city => {
+        html += renderGroup(`📍 ${city}`, grouped[city]);
+    });
+    contentArea.innerHTML = html;
+};
+
 // Tab Switching Logic
 tabs.forEach(tab => {
     tab.addEventListener('click', () => {
-        // Remove active class from all
         tabs.forEach(t => t.classList.remove('active'));
-        // Add active to clicked
         tab.classList.add('active');
         const tabName = tab.dataset.tab;
         if (tabName === 'city') renderByCity();
         else if (tabName === 'birthday') renderByBirthday();
         else if (tabName === 'stage') renderByStage();
+        else if (tabName === 'historical') renderHistorical();
     });
 });
+
 // Initial Render
 renderByCity();
