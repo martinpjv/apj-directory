@@ -164,7 +164,6 @@ main {
 
 /* Estilo para APJ Históricos */
 .apj-card.historical {
-  border-left-color: #999;       /* gris neutro para diferenciar */
   background-color: #f0f0f0;     /* fondo más apagado */
   opacity: 0.85;                 /* un poco más tenue */
 }

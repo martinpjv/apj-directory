@@ -327,6 +327,7 @@ const isUpcomingBirthday = (dateString) => {
 const renderCard = (apj) => {
     const cityClass = apj.city.toLowerCase().replace(/\s+/g, '-');
     const upcomingClass = isUpcomingBirthday(apj.birthday) ? "upcoming-birthday" : "";
+    const historicalClass = apj.stage === "INACTIVO" ? "historical" : "";
     return `
         <div class="apj-card ${cityClass} ${upcomingClass}">
             <div class="apj-name">${apj.name}</div>
@@ -364,8 +365,10 @@ const renderGroup = (title, items) => {
 const renderByCity = () => {
     const grouped = {};
     apjData.forEach(apj => {
-        if (!grouped[apj.city]) grouped[apj.city] = [];
-        grouped[apj.city].push(apj);
+        if (apj.stage !== "INACTIVO") {   // 🚫 excluir históricos
+            if (!grouped[apj.city]) grouped[apj.city] = [];
+            grouped[apj.city].push(apj);
+        }
     });
     const sortedCities = Object.keys(grouped).sort();
     let html = '';
@@ -376,9 +379,12 @@ const renderByCity = () => {
 };
 
 const renderByBirthday = () => {
-    const sorted = [...apjData].sort((a, b) => {
-        return getBirthdaySortValue(a.birthday) - getBirthdaySortValue(b.birthday);
-    });
+    // 1. Filtrar: excluir históricos
+    const sorted = [...apjData]
+        .filter(apj => apj.stage !== "INACTIVO")
+        .sort((a, b) => getBirthdaySortValue(a.birthday) - getBirthdaySortValue(b.birthday));
+
+    // 2. Agrupar por mes
     const grouped = {};
     sorted.forEach(apj => {
         const date = new Date(apj.birthday);
@@ -387,33 +393,60 @@ const renderByBirthday = () => {
         if (!grouped[monthCap]) grouped[monthCap] = [];
         grouped[monthCap].push(apj);
     });
+
+    // 3. Reordenar meses empezando por el actual
+    const today = new Date();
+    const currentMonthIndex = today.getMonth(); // 0 = enero, 11 = diciembre
+    const monthsOrder = [
+        "Enero","Febrero","Marzo","Abril","Mayo","Junio",
+        "Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"
+    ];
+    const reorderedMonths = [
+        ...monthsOrder.slice(currentMonthIndex), // desde el mes actual hasta diciembre
+        ...monthsOrder.slice(0, currentMonthIndex) // luego enero hasta el mes anterior
+    ];
+
+    // 4. Renderizar en el nuevo orden
     let html = '';
-    for (const month in grouped) {
-        html += renderGroup(month, grouped[month]);
-    }
+    reorderedMonths.forEach(month => {
+        if (grouped[month]) {
+            html += renderGroup(month, grouped[month]);
+        }
+    });
+
     contentArea.innerHTML = html;
 };
-
 const renderByStage = () => {
-    const stageOrder = ["Ancla", "Brújula", "Rumbo", "Vuelo", "Compás", "Fragua", "Responsable"];
+    const stageOrder = ["Ancla", "Brújula", "Rumbo", "Vuelo", "Compás", "Fragua", "Responsable Seglar", "Responsable Claretiano", "EPJV"];
     const grouped = {};
+
     apjData.forEach(apj => {
-        if (!grouped[apj.stage]) grouped[apj.stage] = [];
-        grouped[apj.stage].push(apj);
+        // 🚫 excluir históricos
+        if (apj.stage && apj.stage !== "INACTIVO") {
+            if (!grouped[apj.stage]) grouped[apj.stage] = [];
+            grouped[apj.stage].push(apj);
+        }
     });
+
     let html = '';
+
+    // Primero las etapas en orden definido
     stageOrder.forEach(stage => {
         if (grouped[stage]) {
             html += renderGroup(stage, grouped[stage]);
         }
     });
+
+    // Luego cualquier otra etapa no listada (y no INACTIVO)
     Object.keys(grouped).forEach(stage => {
         if (!stageOrder.includes(stage)) {
             html += renderGroup(stage, grouped[stage]);
         }
     });
+
     contentArea.innerHTML = html;
 };
+
 
 const renderHistorical = () => {
     const grouped = {};
